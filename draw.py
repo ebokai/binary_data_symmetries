@@ -77,6 +77,10 @@ def draw_couplings(surface, g):
 
 	coup_str = ','.join([f'{x/amin:.2g}' for x in couplings])
 	dg = font.render(f'Couplings: [{coup_str}]', False, (255, 255, 255))
-	surface.blit(dg, (X, Y + 48))
+	surface.blit(dg, (X, Y + 36))
+
+
+	dg = font.render(f'Model size: [{len(couplings)}]', False, (255, 255, 255))
+	surface.blit(dg, (X, Y + 72))
 
 	return surface

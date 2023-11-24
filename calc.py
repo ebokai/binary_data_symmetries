@@ -8,12 +8,12 @@ def model_couplings(distribution):
 	fi = np.linalg.inv(fn)
 
 	p = np.ones(16)
-	p[np.array(distribution)] = 1000
+	p[np.array(distribution)] = 1e10
 	p = p / np.sum(p)
 
 	g = fi @ np.log(p)
 
-	return -g
+	return g
 
 def orthogonal_decomposition(distribution):
 
